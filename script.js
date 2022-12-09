@@ -26,6 +26,11 @@ $(document).ready(function () {
 
         $('.time-block').each(function(){
             var timeBlock = parseInt($(this).attr('id').split('hour-')[1]);
+
+            if(currentTime == timeBlock){
+                $(this).removeClass("future");
+                $(this).removeClass("past");
+                $(this).addClass("present");
     // TODO: Add code to get any user input that was saved in localStorage and set
     // the values of the corresponding textarea elements. HINT: How can the id
     // attribute of each time-block be used to do this?
