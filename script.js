@@ -23,6 +23,9 @@ $(document).ready(function () {
     function boxTense(){
 
         var currentTime = dayjs().format('HH');
+
+        $('.time-block').each(function(){
+            var timeBlock = parseInt($(this).attr('id').split('hour-')[1]);
     // TODO: Add code to get any user input that was saved in localStorage and set
     // the values of the corresponding textarea elements. HINT: How can the id
     // attribute of each time-block be used to do this?
